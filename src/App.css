@@ -2,37 +2,90 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  width: 100%;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 1px 8px rgba(51,51,51,0.1);
+  border-bottom: 1px solid rgba(216,216,216,0.5);
+  position: fixed;
+  top: 0;
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 20px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-weight: bolder;
+}
+.logo {
+  color: rgb(31, 31, 126);
+  font-size: 30px;
+}
+.nav-ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  width: 380px;
+  font-size: 18px;
+  height: 100px;
+  align-items: center;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border: 1px solid grey;
+  top: 100px;
+  width: 97vw;
+  height: 30px;
+  padding: 20px 0;
+  text-align: center;
+  left: 0;
+
+}
+.dropdown-content div {
+  padding: 5px 20px;
+  border-right: 1px solid grey;
+}
+.dropdown-content div:last-child {
+  border: 0;
+}
+.first-li, .second-li, .third-li, .fourth-li{
+  width: 100px;
+  text-align: center;
+}
+.first-li:hover .dropdown-content,
+.second-li:hover .dropdown-content, 
+.third-li:hover .dropdown-content, 
+.fourth-li:hover .dropdown-content
+{
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.dropdown-content a:hover {
+  background-color: blue;
 }
 
-.App-link {
-  color: #61dafb;
+.actions{
+  font-size: 18px;
 }
+.content{
+  margin-top: 103px;
+  overflow: auto;
+  height: calc(100vh - 103px);
+  
+}
+.imgContainer {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+.imgContainer img {
+  width: 500px;
+  height: 500px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
